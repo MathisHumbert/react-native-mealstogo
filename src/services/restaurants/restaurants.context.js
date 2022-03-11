@@ -23,6 +23,7 @@ export const RestaurantsContextProvider = ({ children }) => {
         })
         .catch((err) => {
           setError(err);
+          setIsLoading(false);
         });
     }, 2000);
   };
