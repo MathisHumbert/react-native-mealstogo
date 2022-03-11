@@ -5,6 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Text } from 'react-native';
 
 import { RestaurantsNavigator } from './restaurants.navigator';
+import { MapScreen } from '../../features/map/screens/map.screen';
 import { SafeArea } from '../../components/utility/safe-area.component';
 
 const TAB_ICON = {
@@ -12,14 +13,6 @@ const TAB_ICON = {
   Map: 'md-map',
   Settings: 'md-settings',
 };
-
-function MapScreen() {
-  return (
-    <SafeArea>
-      <Text>Settings!</Text>
-    </SafeArea>
-  );
-}
 
 function SettingsScreen() {
   return (
