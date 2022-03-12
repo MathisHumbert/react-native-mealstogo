@@ -24,19 +24,6 @@ import { AuthenticationContextProvider } from './src/services/authentication/aut
 // Screen Navigator
 import { Navigation } from './src/infrastructure/navigation';
 
-import { initializeApp } from 'firebase/app';
-
-const firebaseConfig = {
-  apiKey: 'AIzaSyChncgb60ofHWpRt51bPPH_1FMLtkxBcSM',
-  authDomain: 'reactnative-mealstogo.firebaseapp.com',
-  projectId: 'reactnative-mealstogo',
-  storageBucket: 'reactnative-mealstogo.appspot.com',
-  messagingSenderId: '225413781277',
-  appId: '1:225413781277:web:1351e230ef7d79458373f4',
-};
-
-initializeApp(firebaseConfig);
-
 export default function App() {
   const [oswalLoaded] = useOswald({
     Oswald_400Regular,
