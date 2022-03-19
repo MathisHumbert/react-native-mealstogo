@@ -8,6 +8,7 @@ import { SafeArea } from '../../../components/utility/safe-area.component';
 import { Spacer } from '../../../components/spacer/spacer.component';
 import { Search } from '../components/search.component';
 import { FavouritesBar } from '../../../components/favourites/favourites-bar.component';
+import { FadeInView } from '../../../components/animations/fade.animation';
 
 import { RestaurantsContext } from '../../../services/restaurants/restaurants.context';
 import { FavouriteContext } from '../../../services/favourites/favourites.context';
@@ -62,7 +63,9 @@ const RestaurantScreen = ({ navigation }) => {
               }
             >
               <Spacer position='bottom' size='large'>
-                <RestaurantInfoCard restaurant={item} />
+                <FadeInView>
+                  <RestaurantInfoCard restaurant={item} />
+                </FadeInView>
               </Spacer>
             </TouchableOpacity>
           );
