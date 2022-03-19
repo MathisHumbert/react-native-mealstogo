@@ -16,9 +16,6 @@ import {
 import { useFonts as useLato, Lato_400Regular } from '@expo-google-fonts/lato';
 
 // Context
-import { RestaurantsContextProvider } from './src/services/restaurants/restaurants.context';
-import { LocationContextProvider } from './src/services/location/location.context';
-import { FavouriteContextProvider } from './src/services/favourites/favourites.context';
 import { AuthenticationContextProvider } from './src/services/authentication/authentication.context';
 
 // Screen Navigator
@@ -41,13 +38,7 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <AuthenticationContextProvider>
-          <FavouriteContextProvider>
-            <LocationContextProvider>
-              <RestaurantsContextProvider>
-                <Navigation />
-              </RestaurantsContextProvider>
-            </LocationContextProvider>
-          </FavouriteContextProvider>
+          <Navigation />
         </AuthenticationContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style='auto' />
